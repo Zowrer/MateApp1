@@ -8,7 +8,7 @@
     <meta http-equiv="Pragma" content="no-cache">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon.ico" rel="stylesheet" media="all"/>
+    <link rel="shortcut icon" href="img/icons/icon16.png" rel="stylesheet" media="all"/>
 
     <!-- estilos para produccion
 
@@ -17,7 +17,11 @@
     -->
 
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+
+    <script type="text/javascript" src="js/Arranque.js"></script>
+	<script type="text/javascript" src="js/Carga.js"></script>
+	<script type="text/javascript" src="js/MenuPrincipal.js"></script>
 
     <!-- scripts para produccion
 
@@ -29,47 +33,26 @@
   </head>
 
   <body>
-    <div class="main_wrapper">
+      <script>
+      (function() {
+      	var game = new Phaser.Game(720, 1280, Phaser.CANVAS, 'game');
+      	game.state.add('Arranque', NutriEx.Arranque);
+      	game.state.add('Carga', NutriEx.Carga);
+      	game.state.add('MenuPrincipal', NutriEx.MenuPrincipal);
+      	//game.state.add('Creditos', NutriEx.Creditos);
+      	//game.state.add('CapDat', NutriEx.CapDat);
+      	//game.state.add('CapDatos', NutriEx.CapDatos);
+      	//game.state.add('Reinos', NutriEx.Reinos);
+      	//game.state.add('Reino1', NutriEx.Reino1);
+      	//game.state.add('Instrucciones', NutriEx.Instrucciones);
+      	//game.state.add('NutriTips', NutriEx.NutriTips);
+      	//game.state.add('NutriExpedicion', NutriEx.NutriExpedicion);
+      	//game.state.add('Comer', NutriEx.Comer);
+      	//game.state.add('Plato', NutriEx.Plato);
+      	//game.state.add('AyudaPlato', NutriEx.AyudaPlato);
 
-        <header>
-            <hgroup>
-    			<h2 id="MateApp"></h2>
-    		</hgroup>
-            <nav>
-                <ul class="main_menu" id="main_menu">
-                    <li class="menu" id="menu1"> <a href="#"></a> </li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="main_container">
-
-            <aside class="nav_left">
-                <nav id="tabs">
-                    <ul class="aside_menu" id="aside_menu">
-                        <li> <a href="#"></a> </li>
-                    </ul>
-
-                </nav>
-            </aside>
-
-            <div class="contents">
-                <section>
-
-                </section>
-            </div>
-
-        </div>
-
-        <footer class="footer"></footer>
-
-    </div>
-
-    <!--     scripts propios -->
-    <script type="text/javascript" src="js/script.js"></script>
-
-    <!--     scripts propios para produccion
-        <script type="text/javascript" src="js/script.min.js"></script>
-    -->
+      	game.state.start('Arranque');
+      })();
+      </script>
   </body>
 </html>
