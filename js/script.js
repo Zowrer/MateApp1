@@ -1,32 +1,29 @@
+var contador = 1;
+
 jQuery(document).ready(function($){
-    $('.hidden').css({ 'display': 'none' });
-
-    $('#btnBlok').click(function(event) {
-        $('#bloques ').css({ 'display': 'block' });
-        $('.btnA').css({ 'display': 'none' });
+    $( ".header" ).load( "header.html", function() {
+        main();
     });
 
-    $('#back').click(function(event) {
-        $('.hidden').css({ 'display': 'none' });
-        $('.btnA').css({ 'display': 'block' });
-    });
+    $(".footer").append("Aplicaciones Moviles Otoño 2015");
 
-    $('.btnB').click(function(event) {
-        $("#area-"+$(this).attr("id")).css({ 'display': 'block' });
-        $('#bloques').css({ 'display': 'none' });
-    });
+    function main () {
+        $('.menu_bar').click(function(){
+            if (contador == 1) {
+                $('nav').animate({
+                    left: '0'
+                });
+                contador = 0;
+            } else {
+                contador = 1;
+                $('nav').animate({
+                    left: '-100%'
+                });
+            }
+        });
 
-    $('.back').click(function(event) {
-        $('.hidden').css({ 'display': 'none' });
-        $('#bloques').css({ 'display': 'block' });
-    });
-
-    $('.btn').click(function(event) {
-        $("#area-"+$(this).attr("id")).css({ 'display': 'block' });
-        window.location.href = $(this).attr("id")+".html";
-    });
-
-    $('#btnRand').click(function(event) {
-        window.location.href = "juego"+Math.floor((Math.random() * 15) + 1)+".html";
-    });
+        $('.submenu').click(function(){
+            $(this).children('.children').slideToggle();
+        });
+    }
 });

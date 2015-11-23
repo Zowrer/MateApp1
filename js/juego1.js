@@ -1,4 +1,6 @@
 jQuery(document).ready(function($){
+    $('#titulo').append('Fracciones en el Camino');
+
     $.getJSON("dat/juego1.json", function(datos) {
                 $('#msj').html(datos[0].pregunta);
                 for (var i = 0; i < 5; i++) {
