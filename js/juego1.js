@@ -42,12 +42,14 @@ jQuery(document).ready(function($){
 
         $('.option').click(function(event) {
             $('#msjalert').html("Respuesta incorrecta");
+            $('#imgresp').attr({ src: '../img/no.png' });
             $('.submit').detach();
             $_preguntar();
         });
 
         $('#resp').click(function(event) {
             $('#msjalert').html("Muy bien");
+            $('#imgresp').attr({ src: '../img/ok.png' });
             puntos[0].puntos = parseInt(puntos[0].puntos) + 1;
             localStorage.setItem('prueba',JSON.stringify(puntos));
             $('.submit').detach();

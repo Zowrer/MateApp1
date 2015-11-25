@@ -170,6 +170,10 @@ header nav ul li .caret {
 	width: auto;
 }
 
+#imgresp{
+	width: 30px;
+}
+
 #canvas{
 	width: 0px;
 	height: 0px;
