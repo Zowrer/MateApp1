@@ -1,5 +1,8 @@
 [{"pregunta":"Si el grupo está formado por 32 alumnos, ¿cuántos juegan futbol?","respuesta":"16"},
-{"pregunta":"Si el grupo está formado por 32 alumnos, ¿Cuántos practican natación?","respuesta":"8"},
+{"pregunta":"Si el grupo está formado por 16 alumnos, ¿Cuántos practican natación?","respuesta":"4"},
 {"pregunta":"Si el grupo está formado por 32 alumnos, ¿Cuántos juegan beisbol?","respuesta":"4"},
-{"pregunta":"Si el grupo está formado por 32 alumnos, ¿Qué fracciones del grupo practican futbol y beisbol?","respuesta":"5/8"},
-{"pregunta":"Si el grupo está formado por 32 alumnos, ¿Qué fracciones del grupo practican atletismo y beisbol?","respuesta":"3/8"}]
+{"pregunta":"Si el grupo está formado por 24 alumnos, ¿Cuántos practican atletismo?","respuesta":"3"},
+{"pregunta":"Si el grupo está formado por 20 alumnos, ¿cuántos juegan futbol?","respuesta":"10"},
+{"pregunta":"Si el grupo está formado por 48 alumnos, ¿Cuántos practican natación?","respuesta":"12"},
+{"pregunta":"Si el grupo está formado por 48 alumnos, ¿Cuántos juegan beisbol?","respuesta":"6"},
+{"pregunta":"Si el grupo está formado por 32 alumnos, ¿Cuántos practican atletismo?","respuesta":"4"}]
