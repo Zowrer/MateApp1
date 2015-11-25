@@ -4,6 +4,7 @@ var limite;
 var ran;
 var pos;
 
+
 jQuery(document).ready(function($){
     $('#titulo').append('Fracciones en el Camino');
 
@@ -15,10 +16,9 @@ jQuery(document).ready(function($){
         datos = dat;
         limite = datos.length;
 
-        $.getJSON("dat/record.json", function(pts){
-            puntos = pts;
-            $_preguntar();
-        });
+        puntos = JSON.parse(localStorage.prueba);
+
+        $_preguntar();
     });
 
 
@@ -49,6 +49,7 @@ jQuery(document).ready(function($){
         $('#resp').click(function(event) {
             $('#msjalert').html("Muy bien");
             puntos[0].puntos = parseInt(puntos[0].puntos) + 1;
+            localStorage.setItem('prueba',JSON.stringify(puntos));
             $('.submit').detach();
             $_preguntar();
         });
