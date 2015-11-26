@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-    $( "#btn-submit" ).click(function(event) {
+    $( "#btnSubmit" ).click(function(event) {
         var nom = $( "#nombre" ).val();
         var pas = $( "#pass" ).val();
         var pas2 = $( "#pass2" ).val();
@@ -13,6 +13,7 @@ jQuery(document).ready(function($){
 
             $('#form').attr({action: 'login.html'});
             $('#form').submit();
+            //window.location.href = "login.html";
         }
     });
 });

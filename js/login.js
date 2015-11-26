@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-    $( "#btn-submit" ).click(function(event) {
+    $( "#btnSubmit" ).click(function(event) {
         var nom = $( "#nombre" ).val();
         var pas = $( "#pass" ).val();
 
@@ -7,6 +7,7 @@ jQuery(document).ready(function($){
             datos = JSON.parse(localStorage.users);
             for (var i = 0; i < datos.length; i++) {
                 if ((nom == datos[i].user) && (pas == datos[i].pass)) {
+                    //window.location.href = "menu.html";
                     $('#form').attr({action: 'menu.html'});
                     $('#form').submit();
                 }

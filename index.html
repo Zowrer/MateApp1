@@ -18,8 +18,8 @@
           $.getJSON("src/dat/users.json", function(usr){
               var users = usr;
               localStorage.setItem('users',JSON.stringify(users));
+              window.location.href = "src/login.html";
           });
-          window.location.href = "src/login.html";
       })();
       </script>
   </body>
