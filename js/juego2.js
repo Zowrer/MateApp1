@@ -7,11 +7,11 @@ var pos;
 
 jQuery(document).ready(function($){
     $('#titulo').append('Ejercicio en mi Mente');
-    /*
-    $('#img').attr({
-        src: '../img/grafica2.png'
+
+    $('#cent').attr({
+        src: '../img/centenas2.png'
     });
-    */
+
     $.getJSON("dat/juego2.json", function(dat){
         datos = dat;
         limite = datos.length;

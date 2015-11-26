@@ -5,4 +5,13 @@ jQuery(document).ready(function($){
             localStorage.setItem('prueba',JSON.stringify(puntos));
         });
     });
+
+    $('#btnSalir').click(function(event) {
+        navigator.app.exitApp();
+    });
+
+    $('#btnRandom').click(function(event) {
+        var r = Math.floor(Math.random() * 15);
+        window.location.href = "juego"+r+".html";
+    });
 });
