@@ -235,7 +235,7 @@ footer {
 }
 
 .memo{
-	font-size:20px;
+	font-size:12px;
 	font-weight:bold;
 	width: 100%;
 	height: 100%;
@@ -245,8 +245,6 @@ footer {
 	cursor: pointer;
 	color:  #023859;
 	text-decoration:none;
-	margin-top: 5px;
-	margin-left: 5px;
 }
 
 .memo:active {
@@ -291,49 +289,7 @@ footer {
     overflow: hidden;
     border: 1px solid #d3d3d3;
     background: #EDF3FF;
-    width: 70%;
-	height: 70%;
-    margin: 5% auto 0;
+    width: 90%;
     border-radius:5px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-}
-
-.memorama th, .memorama td {
-	padding:10px 20px 10px;
-	text-align:center;
-}
-
-.memorama th {
-	height: 25%;
-	padding-top:12px;
-	text-shadow: 1px 1px 1px #EDF3FF;
-	background:#00ABB7;
-}
-
-.memorama td {
-	width: 25%;
-	height: 100%;
-	border-top:1px solid #e0e0e0;
-	border-right:1px solid #e0e0e0;
-}
-
-.memorama tr.odd-row .memorama td {background:#EDF3FF;}
-.memorama td.first, .memorama th.first {text-align:left}
-.memorama td.last {border-right:none;}
-
-.memorama tr:first-child .memorama th.first {
-    -moz-border-radius-topleft:5px;
-    -webkit-border-top-left-radius:5px; /* Saf3-4 */
-}
-.memorama tr:first-child .memorama th.last {
-    -moz-border-radius-topright:5px;
-    -webkit-border-top-right-radius:5px; /* Saf3-4 */
-}
-.memorama tr:last-child .memorama td.first {
-    -moz-border-radius-bottomleft:5px;
-    -webkit-border-bottom-left-radius:5px; /* Saf3-4 */
-}
-.memorama tr:last-child .memorama td.last {
-    -moz-border-radius-bottomright:5px;
-    -webkit-border-bottom-right-radius:5px; /* Saf3-4 */
 }
