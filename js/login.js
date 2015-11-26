@@ -4,13 +4,13 @@ jQuery(document).ready(function($){
         var pas = $( "#pass" ).val();
 
         if ((nom.length  > 0) && (pas.length  > 0)) {
-            $.getJSON("dat/users.json", function(datos) {
-                for (var i = 0; i < datos.length; i++) {
-                    if ((nom == datos[i].user) && (pas == datos[i].pass)) {
-                        window.location.href = "menu.html";
-                    }
+            datos = JSON.parse(localStorage.users);
+            for (var i = 0; i < datos.length; i++) {
+                if ((nom == datos[i].user) && (pas == datos[i].pass)) {
+                    $('#form').attr({action: 'menu.html'});
+                    $('#form').submit();
                 }
-            });
+            }
         }
     });
 });

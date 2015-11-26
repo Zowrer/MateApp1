@@ -7,7 +7,8 @@
     <meta name="author" content="Zowrer" />
     <meta http-equiv="Pragma" content="no-cache">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="../img/icons/icon16.png" rel="stylesheet" media="all"/>
 
     <script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
@@ -15,40 +16,31 @@
   </head>
 
   <body>
-      <form name="form" id="formregistro">
-          <fieldset>
-              <table>
-                  <tr>
-                      <td>
-                          <label for=""> Usuario: </label>
-                      </td>
-                      <td>
-                          <input class="input" type="text" name="user" id="user" placeholder="Usuario">
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <label for=""> Contraseña: </label>
-                      </td>
-                      <td>
-                          <input class="input" type="password" name="pass" id="pass" placeholder="Contraseña">
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <label for=""> Confirma Contraseña: </label>
-                      </td>
-                      <td>
-                          <input class="input" type="password" name="pass2" id="pass2" placeholder="Contraseña">
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <button class="submit" type="button" name="button"> Registrar </button>
-                      </td>
-                  </tr>
-              </table>
-          </fieldset>
-      </form>
+      <div class="contenedor-formulario">
+  		<div class="wrap">
+  			<h2>Registrar Cuenta MateApp Nueva</h2>
+  			<form id="form" action="" class="formulario" name="formulario_registro" method="get">
+  				<div>
+  					<div class="input-group">
+  						<input type="text" id="nombre" name="nombre">
+  						<label class="label" for="nombre"> Usuario:</label>
+  					</div>
+  					<div class="input-group">
+  						<input type="password" id="pass" name="pass">
+  						<label class="label" for="pass"> Contraseña:</label>
+  					</div>
+                    <div class="input-group">
+  						<input type="password" id="pass2" name="pass2">
+  						<label class="label" for="pass2"> Repetir Contraseña:</label>
+  					</div>
+
+  					<input class="login" type="submit" id="btn-submit" value="Registrar">
+  				</div>
+  			</form>
+  		</div>
+  	</div>
+
+      <!--     scripts propios -->
+      <script type="text/javascript" src="../js/registro.js"></script>
   </body>
 </html>

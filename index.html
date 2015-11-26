@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>MateApp1</title>
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
   </head>
 
   <body>
       <script>
       (function() {
+          if (localStorage.getItem("users") === null) {
+              $.getJSON("src/dat/users.json", function(usr){
+                  var users = usr;
+                  localStorage.setItem('users',JSON.stringify(users));
+              });
+          }
           window.location.href = "src/login.html";
       })();
       </script>
