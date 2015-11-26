@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
-    $( "#ingresar" ).click(function(event) {
-        var nom = $( "#user" ).val();
+    $( ".login" ).click(function(event) {
+        var nom = $( "#nombre" ).val();
         var pas = $( "#pass" ).val();
 
         if ((nom.length  > 0) && (pas.length  > 0)) {
