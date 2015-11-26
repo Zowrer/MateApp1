@@ -1,11 +1,20 @@
 var datos;
 var puntos;
 var limite;
-var ran;
-var pos;
+
+var celdas = new Array("00","01","02","03","10","11","12","13","20","21","22","23","30","31","32","33");
+var par;
+var idx;
+var celda;
+var key;
+
+var id;
+var pulse = -1;
+var band = false;
 
 
 jQuery(document).ready(function($){
+
     $('#titulo').append('Memorama');
 
     $.getJSON("dat/juego7.json", function(dat){
@@ -17,16 +26,19 @@ jQuery(document).ready(function($){
         $_init();
     });
 
+    function $_rest(btn1,btn2){
+        $('#'+btn1).css({ color: '#023859'});
+        $('#'+btn2).css({ color: '#023859'});
+    }
 
     function $_init(){
+        $('#puntos').html(puntos[6].puntos);
 
-        var celdas = new Array("00","01","02","03","10","11","12","13","20","21","22","23","30","31","32","33");
-        var par;
-        var idx;
-        var celda;
-
-        for (var i = 0; i < 7; i++) {
-            par = datos[Math.floor(Math.random() * limite)];
+        for (var i = 0; i < 8; i++) {
+            limite = datos.length;
+            key = Math.floor(Math.random() * limite);
+            //par = datos[key];
+            par = datos.splice(key, 1);
 
             if (celdas.length > 2) {
                 idx = Math.floor(Math.random() * celdas.length);
@@ -35,7 +47,10 @@ jQuery(document).ready(function($){
                 celda = celdas.pop();
             }
 
-            $('#'+celda).append('<button class="option submit">'+par.pregunta+'</button>');
+            var pre = par[0].pregunta;
+            var res = par[0].respuesta;
+
+            $('#'+celda).append('<button class="memo evt" id="a'+i+'">'+pre+'</button>');
 
             if (celdas.length > 1) {
                 idx = Math.floor(Math.random() * celdas.length);
@@ -44,23 +59,40 @@ jQuery(document).ready(function($){
                 celda = celdas.pop();
             }
 
-            $('#'+celda).append('<button class="option submit">'+par.respuesta+'</button>');
+            $('#'+celda).append('<button class="memo evt" id="b'+i+'">'+res+'</button>');
         }
-        /*
-        for (var i = 0; i < 4; i++) {
-            for (var j = 0; j < 4; j++) {
-                $('#'+i+''+j).append('<button class="option submit" id="op'+i+'">'+llaves[Math.floor(Math.random() * 7)].pregunta+'</button>');
+
+        $('.evt').click(function(event) {
+            band = !band;
+
+            if (band) {
+                pulse = $(this).attr('id');
+                $('#'+pulse).css({ color: '#ffffff'});
+            } else{
+                id = $(this).attr('id');
+                $('#'+id).css({ color: '#ffffff'});
+
+                var btn1 = pulse.replace("a", "");
+                var btn2 = id.replace("a", "");
+
+                btn1 = btn1.replace("b", "");
+                btn2 = btn2.replace("b", "");
+
+                if (btn1 == btn2) {
+                    $('#msjalert').html("Muy bien");
+                    $('#imgresp').attr({ src: '../img/ok.png' });
+                    puntos[6].puntos = parseInt(puntos[6].puntos) + 1;
+                    localStorage.setItem('prueba',JSON.stringify(puntos));
+                    $('#puntos').html(puntos[6].puntos);
+                }
+                else {
+                    $('#msjalert').html("Intentalo de nuevo");
+                    $('#imgresp').attr({ src: '../img/no.png' });
+                    setTimeout($_rest, 1000, pulse, id);
+                }
             }
-        }
-        */
-        /*
-        $('.option').click(function(event) {
-            $('#msjalert').html("Respuesta incorrecta");
-            $('#imgresp').attr({ src: '../img/no.png' });
-            $('.submit').detach();
-            $_preguntar();
         });
-        */
+
         /*
         $('#resp').click(function(event) {
             $('#msjalert').html("Muy bien");
@@ -72,5 +104,4 @@ jQuery(document).ready(function($){
         });
         */
     }
-
 });
