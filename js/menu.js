@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
     });
 
     $('#btnSalir').click(function(event) {
-        navigator.app.exitApp();
+        window.location.href = "logout.html";
     });
 
     $('#btnRandom').click(function(event) {
