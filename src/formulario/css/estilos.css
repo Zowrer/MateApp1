@@ -64,7 +64,7 @@ body {
           margin-left: 15px;
           font-size: 16px;
           line-height: 16px;
-          position: absolute;
+          position: static;
           top: 16px;
           left: 0; }
           .contenedor-formulario .formulario .input-group label.label.active {
