@@ -75,7 +75,7 @@ body {
       .contenedor-formulario .formulario .input-group.checkbox label, .contenedor-formulario .formulario .input-group.radio label {
         display: inline-block;
         cursor: pointer;
-        color: #4BFFDE;
+        color: #303F9F;
         position: relative;
         padding: 5px 15px 5px 51px;
         font-size: 1em;
