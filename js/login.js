@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-    $( ".login" ).click(function(event) {
+    $( "#btn-submit" ).click(function(event) {
         var nom = $( "#nombre" ).val();
         var pas = $( "#pass" ).val();
 

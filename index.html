@@ -9,13 +9,17 @@
   <body>
       <script>
       (function() {
-          if (localStorage.getItem("users") === null) {
+          /*if (localStorage.getItem("users") === null) {
               $.getJSON("src/dat/users.json", function(usr){
                   var users = usr;
                   localStorage.setItem('users',JSON.stringify(users));
               });
-          }
-          window.location.href = "src/menu.html";
+          }*/
+          $.getJSON("src/dat/users.json", function(usr){
+              var users = usr;
+              localStorage.setItem('users',JSON.stringify(users));
+          });
+          window.location.href = "src/login.html";
       })();
       </script>
   </body>

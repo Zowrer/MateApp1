@@ -13,7 +13,7 @@ body {
 .wrap {
   width: 90%;
   max-width: 500px;
-  padding: 40px;
+  padding: 20px;
   margin: auto;
   background: #fff;
   box-shadow: 0px 0px 3px grey; }
@@ -21,13 +21,13 @@ body {
 .contenedor-formulario {
   width: 100%;
   color: #f2f2f2;
-  padding: 50px; }
+  padding: 20px; }
   .contenedor-formulario .formulario {
     width: 100%;
     margin: auto; }
     .contenedor-formulario .formulario .input-group {
       position: relative;
-      margin-bottom: 32px; }
+      margin-bottom: 16px; }
       .contenedor-formulario .formulario .input-group input[type="text"],
       .contenedor-formulario .formulario .input-group input[type="email"],
       .contenedor-formulario .formulario .input-group input[type="password"] {
@@ -36,7 +36,7 @@ body {
         color: #303F9F;
         width: 100%;
         outline: none;
-        padding: 15px;
+        padding: 6px;
         background: none;
         border: none;
         border-bottom: 2px solid #BBDEFB; }
@@ -120,7 +120,7 @@ body {
           background: #303F9F;
           color: #f2f2f2;
           padding: 5px 15px; }
-    .contenedor-formulario .formulario input[type="submit"] {
+    .contenedor-formulario .formulario button {
       background: #303F9F;
       border-radius: 1px;
       border: 2px solid #f2f2f2;
@@ -134,7 +134,7 @@ body {
       -webkit-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-      .contenedor-formulario .formulario input[type="submit"]:hover {
+      .contenedor-formulario .formulario button:hover {
         background: #1976D2; }
 
 /*# sourceMappingURL=estilos.css.map */
